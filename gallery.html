@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            cursor: none; /* Custom cursor */
+        }
+
+        /* Navigation Bar */
+        .glass-nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .glass-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .glass-nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .glass-nav a:hover {
+            color: #ff6347;
+        }
+
+        /* Gallery Section */
+        #gallery {
+            padding: 50px 20px;
+            text-align: center;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            transition: background-color 2s ease; /* Smooth transition for color change */
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .gallery-title {
+            font-size: 3rem;
+            margin-bottom: 50px;
+            background: linear-gradient(to right, #ff6347, #ffcc33);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: scrollEffect 5s infinite;
+        }
+
+        @keyframes scrollEffect {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+        }
+
+        .card:hover::after {
+            width: 300px;
+            height: 300px;
+            opacity: 1;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 9999;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .lightbox .close-btn:hover {
+            color: #ff6347;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s ease-out;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="author.html">Author Details</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h1 class="gallery-title">Art Gallery</h1>
+        <div class="grid">
+            <div class="card" data-caption="Beautiful Art 1"><img data-src="a1.jpg" alt="Art 1" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 2"><img data-src="a2.jpg" alt="Art 2" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 3"><img data-src="a3.jpg" alt="Art 3" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 4"><img data-src=b18.jpg" alt="Art 4" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 5"><img data-src="b20.jpg" alt="Art 5" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 6"><img data-src="a6.jpg" alt="Art 6" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 7"><img data-src="a7.jpg" alt="Art 7" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 8"><img data-src="a8.jpg" alt="Art 8" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 9"><img data-src="g.jpg" alt="Art 9" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 10"><img data-src="h.jpg" alt="Art 10" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 11"><img data-src="a9.jpg" alt="Art 11" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 12"><img data-src="a1.jpg" alt="Art 12" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 13"><img data-src="a2.jpg" alt="Art 13" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 14"><img data-src="a3.jpg" alt="Art 14" class="lazy"></div>
+            <div class="card" data-caption="Beautiful Art 15"><img data-src="a4.jpg" alt="Art 15" class="lazy"></div>
+         
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <img src="" alt="Art" id="lightboxImg">
+    </div>
+
+    <script>
+        // Custom Cursor Functionality
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        });
+
+        // Image Lazy Loading
+        document.addEventListener("DOMContentLoaded", () => {
+            const images = document.querySelectorAll('.lazy');
+            images.forEach(img => {
+                img.src = img.getAttribute('data-src');
+                img.onload = () => img.classList.remove('lazy');
+            });
+        });
+
+        // Lightbox Functionality
+        const cards = document.querySelectorAll('.card');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeBtn = document.getElementById('closeBtn');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const imgSrc = card.querySelector('img').getAttribute('data-src');
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        // Function to Change Background Color Smoothly
+        const colors = ['#FF6347', '#98C5E6', '#FFCC33', '#F3A5A1', '#A1C4FD'];
+        let currentColorIndex = 0;
+
+        function changeBackgroundColor() {
+            const gallerySection = document.getElementById('gallery');
+            gallerySection.style.backgroundColor = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        }
+
+        setInterval(changeBackgroundColor, 5000); // Change background color every 5 seconds
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #0d1117;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Particle Background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Main Content Container */
+.main-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Glass Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Header Section */
+.header-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00ffcc;
+    text-shadow: 2px 2px 5px rgba(0, 255, 204, 0.5);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.header-section h1:hover {
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+.header-section p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.header-section p:hover {
+    opacity: 1;
+}
+
+/* Form Section */
+.form-container {
+    padding: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #00ffcc;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: #333333;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: #00ffcc;
+    box-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+}
+
+.input-group button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #00ffcc;
+    color: #000000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.input-group button:hover {
+    background: #009973;
+    transform: scale(1.05);
+}
+
+/* Bio Section */
+.bio-section {
+    margin-top: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.bio-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ffcc;
+    text-shadow: 1px 1px 3px rgba(0, 255, 204, 0.5);
+    margin-bottom: 15px;
+}
+
+.bio-section p {
+    margin-bottom: 15px;
+}
+
+.bio-section .highlight {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+/* Footer Section */
+.footer-section {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footer-section p {
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section p:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .glass-effect {
+        padding: 10px;
+    }
+    .header-section h1 {
+        font-size: 1.5rem;
+    }
+    .header-section p {
+        font-size: 0.9rem;
+    }
+}
+.glass-effect:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+

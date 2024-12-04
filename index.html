@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the creative world of Sserwadda Remmy's art. From testimonials to blogs, be inspired through his artistic journey.">
+    <meta name="keywords" content="Sserwadda Remmy, Art, Gallery, Creativity, Painting">
+    <meta name="author" content="Sserwadda Remmy">
+    <title>Sserwadda Remmy Art Website</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Accessibility Improvements -->
+    <style>
+        :focus {
+            outline: 3px solid #00ff00;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            clip: rect(0, 0, 0, 0);
+            overflow: hidden;
+        }
+
+        /* Loading animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        /* SVG Animation */
+        .animated-icon svg path {
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            animation: draw 2s linear forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Micro-interactions */
+        button:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Cookie Consent Banner */
+        #cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            display: none;
+            z-index: 9999;
+        }
+
+        #cookie-consent-banner button {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+      #testimonials {
+            padding: 50px 20px;
+            background: #f9f9f9;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .testimonial {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .testimonial .stars {
+            color: #f4b400;
+            margin-bottom: 10px;
+        }
+
+        .testimonial span {
+            font-style: italic;
+            font-size: 14px;
+            color: #555;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent-banner">
+        <p>We use cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.</p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+        <p>Loading Sserwadda Remmy Art...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Section -->
+    <header id="home" class="landing">
+        <div id="particle-background"></div>
+        <div class="landing-content">
+            <h1 id="dynamic-title" aria-label="Remmy Inspires You Through Art">Remmy Inspires You Through Art</h1>
+            <p>Explore creativity like never before.</p>
+            <a href="gallery.html" class="button">View Gallery</a>
+            <div class="animated-icon">
+                <svg width="100" height="100" viewBox="0 0 100 100">
+                    <path d="M10 80 C40 10, 60 10, 90 80" stroke="white" fill="none" stroke-width="2" />
+                </svg>
+            </div>
+        </div>
+    </header>
+
+<!-- Testimonials Section -->
+    <section id="testimonials" data-aos="fade-up">
+        <h2>What People Are Saying</h2>
+        <div class="testimonial-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial" data-aos="fade-right">
+                <img src="alan.jpg" alt="Eriya Drake">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"Remmy's art changed how I see creativity. Absolutely inspiring!"</p>
+                <span>- Eriya Drake</span>
+                <a href="#contact" class="cta">Contact Us</a>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial" data-aos="fade-left">
+                <img src="eriya.jpg" alt="Abdul Lateef">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"The gallery is stunning. A must-see for art lovers."</p>
+                <span>- Abdul Lateef</span>
+                <a href="#contact" class="cta">Contact Us</a>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial" data-aos="zoom-in">
+                <img src="lateef.jpg" alt="Alan Cartel">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Every visit to the gallery feels like a new adventure into the world of art. Truly captivating!"</p>
+                <span>- Alan Cartel</span>
+                <a href="#contact" class="cta">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    </section>
+     <section id="blog" class="blog-section" data-aos="fade-up">
+    <h2>Our Blog</h2>
+    <div class="blog-container">
+        <!-- Blog Post 1 -->
+        <div class="blog-post glass-effect morphism" data-aos="zoom-in" data-aos-delay="100">
+            <img src="y.jpg" alt="The Journey of Art" class="blog-image">
+            <div class="blog-content">
+                <h3>The Journey of Art</h3>
+                <p>Discover how art can transform lives through creativity and expression...</p>
+                <a href="blog.html" class="read-more hover-effect">Read More</a>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-post glass-effect morphism" data-aos="zoom-in" data-aos-delay="200">
+            <img src="z.jpg" alt="Mastering Painting" class="blog-image">
+            <div class="blog-content">
+                <h3>Mastering Painting</h3>
+                <p>Learn the secrets and techniques to elevate your painting skills...</p>
+                <a href="Master.html" class="read-more hover-effect">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section" data-aos="fade-up">
+        <h2>Our Blog</h2>
+        <div class="blog-container">
+            <!-- Blog Post 1 -->
+            <div class="blog-post glass-effect morphism" data-aos="zoom-in" data-aos-delay="100">
+                <img src="y.jpg" alt="The Journey of Art" class="blog-image">
+                <div class="blog-content">
+                    <h3>The Journey of Art</h3>
+                    <p>Discover how art can transform lives through creativity and expression...</p>
+                    <a href="blog.html" class="read-more hover-effect">Read More</a>
+                </div>
+            </div>
+            <!-- Additional blog posts omitted for brevity -->
+
+            <!-- Master HTML Blog Part Restored -->
+            <div class="blog-post glass-effect morphism" data-aos="zoom-in" data-aos-delay="200">
+                <img src="z.jpg" alt="Masterpiece in the Making" class="blog-image">
+                <div class="blog-content">
+                    <h3>Masterpiece in the Making</h3>
+                    <p>Follow the creation of a new masterpiece as we take you behind the scenes...</p>
+                    <a href="master.html" class="read-more hover-effect">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact Section -->
+<section id="contact" class="contact-section" data-aos="fade-right">
+    <h2>Contact Us</h2>
+
+    <!-- Option 1: Using Mailto -->
+    <form action="mailto:sserwaddaremmy@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+        <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+        <button type="submit">Send Message (Via Email Client)</button>
+    </form>
+
+    <!-- Option 2: Using Formspree -->
+    <form action="https://formspree.io/f/kalellatiz@gmail.com" method="post" class="modern-contact-form">
+        <input type="text" name="name" placeholder="Your Name" aria-label="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+        <textarea name="message" placeholder="Your Message" aria-label="Your Message" required></textarea>
+        <button type="submit">Send Message (Via Formspree)</button>
+    </form>
+</section>
+     <!-- Social Media Icons Section -->
+<section id="social-media" class="social-media-section">
+    <h2>Follow Us</h2>
+    <div class="social-icons">
+        <a href="https://facebook.com/Remmy Sserwadda" class="social-icon" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://twitter.com/RemySSerwadda" class="social-icon" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/SserwaddaRemmy" class="social-icon" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com/@remmysserwadda" class="social-icon" target="_blank" aria-label="tiktok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <!-- Social Media Icons Section -->
+      <div class="social-icons">
+    <a href="https://wa.me/256754578242" target="_blank" class="social-icon whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Add other social platforms here -->
+</div>
+
+    </div>
+</section>
+
+<!-- CSS for Social Media Icons -->
+<style>
+    /* Social Media Section */
+    #social-media {
+        text-align: center;
+        padding: 20px;
+        background-color: #222;
+        color: white;
+    }
+
+    #social-media h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icon {
+        font-size: 40px;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        transform: scale(1.2);
+        animation: glowing 1.5s infinite alternate;
+    }
+
+    /* Glowing Effect */
+    @keyframes glowing {
+        0% {
+            text-shadow: 0 0 5px #ff6347, 0 0 10px #ff6347, 0 0 15px #ff6347;
+        }
+        50% {
+            text-shadow: 0 0 10px #ff6347, 0 0 20px #ff6347, 0 0 30px #ff6347;
+        }
+        100% {
+            text-shadow: 0 0 15px #ff6347, 0 0 30px #ff6347, 0 0 45px #ff6347;
+        }
+    }
+</style>
+
+<!-- Include Font Awesome for icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Conceptual Art World. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script>
+        // Initialize animations
+        AOS.init();
+
+        // Loading screen
+        window.onload = () => {
+            document.getElementById('loading').style.display = 'none';
+        };
+
+        // Particles.js setup
+        particlesJS("particle-background", {
+            particles: {
+                number: { value: 100, density: { enable: true, value_area: 800 } },
+                color: { value: "#00ff00" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                move: { enable: true, speed: 2, direction: "none", out_mode: "out" }
+            },
+            interactivity: {
+                events: {
+                    onhover: { enable: true, mode: "repulse" }
+                }
+            },
+            retina_detect: true
+        });
+
+        // Cookie consent handling
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookies = decodedCookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let c = cookies[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(cname) === 0) {
+                    return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookieConsent() {
+            const cookieConsent = getCookie("cookie-consent");
+            if (cookieConsent !== "accepted") {
+                document.getElementById("cookie-consent-banner").style.display = "block";
+            }
+        }
+
+        document.getElementById("accept-cookies").onclick = () => {
+            setCookie("cookie-consent", "accepted", 365);
+            document.getElementById("cookie-consent-banner").style.display = "none";
+        };
+
+        // Initialize cookie consent check
+        checkCookieConsent();
+    </script>
+   <style>
+    .contact-section form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-section input, .contact-section textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    .contact-section button {
+        padding: 10px 20px;
+        background-color: #00ff00;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .contact-section button:hover {
+        background-color: #009900;
+    }
+
+    .modern-contact-form button {
+        background-color: #007bff;
+    }
+
+    .modern-contact-form button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<script>
+    document.querySelector('.modern-contact-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const form = e.target;
+
+        // Show confirmation or thank-you message
+        alert('Thank you! Your message has been sent successfully.');
+
+        // Optionally reset the form
+        form.reset();
+    });
+</script>
+
+</body>
+
+</html>

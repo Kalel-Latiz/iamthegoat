@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author's blog</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("nav a").forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    target.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+<button id="theme-toggle" class="glass-effect">CHANGE THEME</button>
+<script>
+    const toggleButton = document.getElementById("theme-toggle");
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("light-theme");
+    });
+</script>
+<style>
+    .light-theme {
+        color: #000;
+        background: #fff;
+    }
+    .light-theme nav a {
+        color: #007bff;
+    }
+</style>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: #0d1117;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #009973;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .story {
+            white-space: pre-wrap;
+            line-height: 1.8;
+        }
+
+        .footer-section {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+   
+
+
+                <p class="story">
+                 
+<ol>
+<li>Art as a Mirror of Society
+Art reflects the culture, struggles, and triumphs of the times we live in. From the powerful street murals of modern cities to the intricate traditional paintings of ancient civilizations, art tells stories that words often fail to capture.
+
+Example: Think of the bold graffiti that adorns urban streets, amplifying voices for justice, or the delicate African tribal art that preserves centuries-old traditions.
+
+Takeaway: Art connects us to our roots while sparking conversations about our future.</li>
+
+<li><br>The Healing Power of Creativity
+Art has the unique ability to heal emotionally, mentally, and even physically. Studies show that engaging in artistic activities reduces stress and promotes mental well-being.
+
+At Sserwadda Remmy Art, we’ve seen individuals transform through creative expression. Whether it’s painting, sketching, or simply observing art, the process is therapeutic.
+
+Call to Action: Why not pick up a brush today and let your emotions flow? Your masterpiece might surprise you!</li>
+
+<li><br>The Global Language of Art
+No matter where you come from, art is a universal language. A single painting can evoke joy, sorrow, or wonder—emotions that need no translation.
+
+We aim to foster connections through art, bringing people together from different walks of life. By sharing our gallery and blog, we hope to inspire others to see the beauty in diversity.
+
+Highlight: Our recent gallery exhibit featured contributions from artists across Africa, showcasing the rich cultural tapestry of the continent.</li>
+
+<li><br>Finding Inspiration in Everyday Life
+Sometimes, the most mundane things can spark extraordinary ideas. A sunset, a rainy day, or even a bustling marketplace can become the muse for your next masterpiece.
+
+Tip: Keep a small sketchbook with you at all times. Inspiration often strikes when you least expect it!
+
+Conclusion
+Art is not just for the artist—it’s for everyone. It connects us, heals us, and reminds us of the beauty in life. At Sserwadda Remmy Art, we’re passionate about sharing this journey with you.
+
+Engage with Us: What does art mean to you? Share your thoughts in the comments or visit our gallery to experience the magic firsthand.</li>
+
+</ol>
+                </p>
+            </div>
+       
+
+
+        <!-- Footer Section -->
+        <footer class="footer-section glass-effect">
+            <p>&copy; 2024 Author's Corner. All rights reserved.</p>
+          
+        </footer>
+    </div>
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": {
+                    "type": "circle",
+                    "stroke": { "width": 0, "color": "#000000" },
+                    "polygon": { "nb_sides": 5 }
+                },
+                "opacity": { "value": 0.5, "anim": { "enable": false } },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 2 }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } }
+                }
+            },
+            "retina_detect": true
+        });
+
+        function showTab(tabId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => section.classList.remove("active"));
+            document.getElementById(tabId).classList.add("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Author's Corner</title>
+    <link rel="stylesheet" href="author.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll("nav a").forEach(anchor => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute("href"));
+                    target.scrollIntoView({ behavior: "smooth" });
+                });
+            });
+        });
+    </script>
+<button id="theme-toggle" class="glass-effect">CHANGE THEME</button>
+<script>
+    const toggleButton = document.getElementById("theme-toggle");
+    toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("light-theme");
+    });
+</script>
+<style>
+    .light-theme {
+        color: #000;
+        background: #fff;
+    }
+    .light-theme nav a {
+        color: #007bff;
+    }
+</style>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: #0d1117;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .main-content {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #009973;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .story {
+            white-space: pre-wrap;
+            line-height: 1.8;
+        }
+
+        .footer-section {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header Section -->
+        <header class="header-section glass-effect">
+            <h1>Welcome to Author's Corner</h1>
+            <p>Explore the story behind the canvas and the culture it celebrates.</p>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="#authors-corner" onclick="showTab('authors-corner')">Author's Corner</a>
+            <a href="#prose-palette" onclick="showTab('prose-palette')">Prose Palette</a>
+            <a href="#authors-biodata" onclick="showTab('authors-biodata')">Author's Biodata</a>
+        </nav>
+
+        <!-- Author Details Section -->
+        <section id="authors-corner" class="active">
+            <div class="form-container glass-effect">
+                <h2>Share Your Opinion</h2>
+                <form action="mailto:sserwaddaremmy@gmail.com" method="post" enctype="text/plain">
+                    <div class="input-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="opinion">Your Opinion:</label>
+                        <textarea id="opinion" rows="5" placeholder="Write your thoughts here" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </section>     
+
+        <!-- Prose Palette Section -->
+        <section id="prose-palette">
+            <div class="glass-effect">
+                <h2>The Prose Palette</h2>
+                <p class="story">
+                    Saloon ya Maama (Mummy's Beauty Shop and Saloon)
+                    (Peas and Beans)
+                    
+                    Hairstyle trends/fashions and females are joined at the hip, a niche opened up at an opportune time for my mother. Hairdressing and beautician work was her livelihood. Growing up in a family where my mum owned a saloon that the neighborhood frequented, often when she had bookings, all she prepared were fast cuisines to meet both her motherly expectations of cosseting her husband and children with breakfast, lunch, and dinner, and work. However, she was averse to cooking foods/cuisines that took perpetuity to ready under customary cooking technologies and techniques like steamed matooke (plantain) in banana/plantain leaves, beans, meats, among others that her husband unwaveringly lived to indulge. 
+
+                    In modern times, technologies and techniques have advanced, like cooking these cuisines in high pressure in a pressure cooker. Additives like vinegar have been brought to the fore, and other meat tenderizers quicken the duration of cooking different cuisines. 
+                    
+                    The multifarious engagements at the beauty shop/saloon and home, she could only spread herself too thin watching over her home, work, and marriage. The workload became humongous. Her uniquely endowed supernatural ability of inherent multitasking and reproduction (envoy of life) became a chicken coming to roost situation, and closure was inevitable. 
+
+                    Faced with moral quandaries and societal expectations only meant a great deal on which side of the fence she had to come down. This implores a question: a moral conundrum, societal quandary, African setting paradoxes on females, and feminism/femininity realm dilemmas; in African (world) cultures, is it the prerogative of a woman to exclusively take care of the home alone and be robbed of her prerogative to work? This is a debate that rages on in my society; it’s a Pandora's box that has failed to catch perpetual unraveling.
+                    
+                    Women are the emotional gender that handles well emotional situations. It’s safe to say dropping off a child in a kindergarten run by women feels right as opposed to the reverse. On emotional grounds, it means a great deal to patriotism and perhaps remedies disingenuous acts like corruption, Africa's synonym. Figuratively, continents and countries are synonymous with motherlands singularly because of their unwavering benevolence/generosity and affinity to humanity.
+                    
+                    To contextualize the metaphor of the expeditions of the chess pieces on the board, the queen (woman) moves countless steps in all directions as opposed to the king (man), which is confined to not more than two steps. Does this allude to the numerous opportunities and possibilities that women can spur? Are these connotations or correlations of a gynecocracy in hindsight of the activities on the chess board? Perhaps a gynecocracy is pragmatic; a tribe in the north of Uganda, women are responsible for building a home for the husband and providing for the home. The ball is in your court; there is a thin dichotomy between what a man and a woman can and can't do. However, the world is for us all to enjoy. Together we are a robust force/union.
+                </p>
+            </div>
+        </section>
+
+        <!-- Author Biodata Section -->
+        <section id="authors-biodata">
+            <div class="glass-effect">
+                <h2>About the Author</h2>
+                <p>Remmy Sserwadda, a <span class="highlight">Ugandan artist</span> based in Kampala, is a self-taught talent working with oils on canvas. Recently, he has embraced sculpting, exploring themes around food culture and its societal significance.</p>
+                <p>Through his craft, Remmy documents and celebrates <span class="highlight">African and Ugandan cuisines</span>, using them as metaphors to explore societal narratives. His work challenges the global disregard for traditional African culinary arts, emphasizing their cultural importance and identity.</p>
+                <p>Remmy's mission is to preserve and promote food cultures while critiquing the global culinary landscape, creating a legacy for future generations with his art.</p>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section glass-effect">
+            <p>&copy; 2024 Author's Corner. All rights reserved.</p>
+          
+        </footer>
+    </div>
+
+    <!-- Particles.js Configuration -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": {
+                    "type": "circle",
+                    "stroke": { "width": 0, "color": "#000000" },
+                    "polygon": { "nb_sides": 5 }
+                },
+                "opacity": { "value": 0.5, "anim": { "enable": false } },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 2 }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" }
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } }
+                }
+            },
+            "retina_detect": true
+        });
+
+        function showTab(tabId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach(section => section.classList.remove("active"));
+            document.getElementById(tabId).classList.add("active");
+        }
+    </script>
+</body>
+</html>
